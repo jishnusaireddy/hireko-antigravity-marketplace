@@ -4,7 +4,7 @@ description: Sign in and manage your Hireko Recruiter workspace. Candidate analy
 ---
 
 
-# HirekoOpenPlugin
+# Hireko AI Recruiter
 
 The user invoked this slash command with free-form text after the command name. Do not ask questions. Do not list tenants. Do not invent URLs.
 
@@ -36,15 +36,15 @@ The plugin MCP server is **stdio**, a child of the harness (Claude, Cursor, Herm
    > You are not signed in to Hireko yet.
    >
    > **Option 1 (Recommended - Browser Device Login):**
-   > `/HirekoOpenPlugin beta [tenant_name]` (or `/HirekoOpenPlugin [tenant_name]`)
+   > `/hireko-recruiter beta [tenant_name]` (or `/hireko-recruiter [tenant_name]`)
    > Claude will open Google Chrome to the secure AWS Cognito sign-in page where you enter your email and password without sharing them in chat.
    >
    > **Option 2 (Direct Prompt Box Login):**
-   > `/HirekoOpenPlugin [beta|prod] [tenant_name] [username/email] [password]`
+   > `/hireko-recruiter [beta|prod] [tenant_name] [username/email] [password]`
    >
    > Examples:
-   > - `/HirekoOpenPlugin beta techforce`
-   > - `/HirekoOpenPlugin techforce`
+   > - `/hireko-recruiter beta techforce`
+   > - `/hireko-recruiter techforce`
    Stop.
 
 ## Login Execution
@@ -134,12 +134,12 @@ Priority: explicit tool args > `apiKey` > `HIREKO_INTERNAL_API_KEY` > plain-env 
 
 ### Format 1 — Plain-env triplet (recommended for CI & Docker)
 
-Separate environment variables prefixed with `HirekoOpenPlugin_`:
+Separate environment variables prefixed with `hireko-recruiter_`:
 
 ```bash
-export HirekoOpenPlugin_tenant="mycompany"
-export HirekoOpenPlugin_username="ci-user@example.com"
-export HirekoOpenPlugin_password="secretPassword123"
+export hireko-recruiter_tenant="mycompany"
+export hireko-recruiter_username="ci-user@example.com"
+export hireko-recruiter_password="secretPassword123"
 ```
 
 The proxy auto-logs in at serve startup — no MCP `login` call needed.
@@ -172,9 +172,9 @@ A single environment variable containing the base64-encoded JSON representation 
 ```yaml
 env:
   # Format 1 (Plain-env triplet):
-  HirekoOpenPlugin_tenant: ${{ secrets.HIREKO_TENANT }}
-  HirekoOpenPlugin_username: ${{ secrets.HIREKO_USERNAME }}
-  HirekoOpenPlugin_password: ${{ secrets.HIREKO_PASSWORD }}
+  hireko-recruiter_tenant: ${{ secrets.HIREKO_TENANT }}
+  hireko-recruiter_username: ${{ secrets.HIREKO_USERNAME }}
+  hireko-recruiter_password: ${{ secrets.HIREKO_PASSWORD }}
 
   # Or Format 2 (Base64 bundle):
   # HIREKO_INTERNAL_API_KEY: ${{ secrets.HIREKO_INTERNAL_API_KEY }}

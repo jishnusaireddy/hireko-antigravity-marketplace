@@ -1,7 +1,0 @@
-{
-  "mcpServers": {
-    "hireko-recruiter": {
-      "url": "https://hireko-mcp-server.onrender.com/sse"
-    }
-  }
-}

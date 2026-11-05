@@ -9,10 +9,7 @@
     "url": "https://hireko.com"
   },
   "homepage": "https://hireko.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jishnusaireddy/hireko-antigravity-marketplace"
-  },
+  "repository": "https://github.com/jishnusaireddy/hireko-antigravity-marketplace",
   "suggestedPrompts": [
     "Show candidate interview counts and pass rates",
     "Create candidate interview link for Senior Engineer",

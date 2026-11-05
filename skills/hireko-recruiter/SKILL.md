@@ -1,10 +1,8 @@
 ---
-name: hirekoopenplugin
-description: Sign in and manage your Hireko Recruiter workspace. Usage: /HirekoOpenPlugin [tenant-name]
-argument-hint: "[tenant-name]"
-user-invocable: true
-disable-model-invocation: true
+name: hireko-recruiter
+description: Sign in and manage your Hireko Recruiter workspace. Candidate analytics, AI interview links, and candidate search scorecards.
 ---
+
 
 # HirekoOpenPlugin
 

@@ -1,0 +1,12 @@
+{
+  "name": "hireko-recruiter",
+  "displayName": "Hireko AI Recruiter",
+  "description": "Hireko AI Recruiter: candidate analytics, AI interview links, and candidate search scorecards.",
+  "logo": "assets/logo.png",
+  "category": "Productivity",
+  "suggestedPrompts": [
+    "Show candidate interview counts and pass rates",
+    "Create candidate interview link for Senior Engineer",
+    "Search candidates for Java Spring Boot and Microservices"
+  ]
+}

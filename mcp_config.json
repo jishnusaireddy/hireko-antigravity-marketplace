@@ -1,7 +1,14 @@
 {
   "mcpServers": {
     "hireko-recruiter": {
-      "url": "https://hireko-mcp-server.onrender.com/sse"
+      "command": "node",
+      "args": [
+        "./bundle.mjs",
+        "serve"
+      ],
+      "env": {
+        "PLUGIN_NAME": "hireko-recruiter"
+      }
     }
   }
 }

@@ -9,7 +9,7 @@ Official Antigravity plugin for **Hireko AI Recruiter**: candidate interview ana
 - 📊 **Candidate Pipeline & Analytics**: Fetch candidate counts, status breakdowns (completed vs. pending), and interview outcomes without leaving your chat.
 - 🔗 **AI Interview Generation**: Create personalized interview links for candidates across all supported job funnels.
 - 🎯 **Candidate Search & Scoring**: Retrieve semantic match scores and evaluation details for candidates evaluated by Hireko AI.
-- 🔐 **Zero-Config Multi-Tenant Auth**: Direct cloud-connected MCP architecture with seamless browser login. Recruiters simply enter their tenant credentials securely without manual key copying.
+- 🔐 **Zero-Config Multi-Tenant Auth**: Direct local auth proxy (`bundle.mjs`) with seamless browser login. Recruiters simply enter their tenant credentials securely without manual key copying.
 
 ---
 
@@ -50,7 +50,7 @@ Once installed, try asking:
 
 ---
 
-## Backend MCP Endpoint
-- **Cloud MCP SSE**: `https://hireko-mcp-server.onrender.com/sse`
-- **Health Check**: `https://hireko-mcp-server.onrender.com/health`
-- **Device Login**: `https://hireko-mcp-server.onrender.com/devicelogin`
+## Engine & Architecture
+- **Engine**: Local Stdio MCP Router (`node bundle.mjs serve`)
+- **Downstream Tools**: 10 Recruiter Facade business tools
+- **Authentication**: Multi-tenant AWS Cognito via browser device flow or direct credentials

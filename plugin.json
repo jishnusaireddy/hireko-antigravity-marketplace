@@ -6,9 +6,9 @@
   "logo": "assets/logo.png",
   "author": {
     "name": "Hireko",
-    "url": "https://hireko.com"
+    "url": "https://hireko.ai"
   },
-  "homepage": "https://hireko.com",
+  "homepage": "https://hireko.ai",
   "repository": "https://github.com/jishnusaireddy/hireko-antigravity-marketplace",
   "suggestedPrompts": [
     "Show candidate interview counts and pass rates",
